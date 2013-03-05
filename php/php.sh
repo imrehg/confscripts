@@ -1,5 +1,5 @@
-PVER=5.3.5
-wget -c http://nl.php.net/get/php-$PVER.tar.bz2/from/nl.php.net/mirror
+PVER=5.3.22
+wget -c http://www.php.net/get/php-${PVER}.tar.bz2/from/nl1.php.net/mirror
 tar xjf php-$PVER.tar.bz2
 cd php-$PVER
 
