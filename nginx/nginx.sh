@@ -1,4 +1,4 @@
-NVER=1.3.13
+NVER=1.3.15
 wget -c http://nginx.org/download/nginx-$NVER.tar.gz
 tar xzf nginx-$NVER.tar.gz
 cd nginx-$NVER
@@ -15,6 +15,7 @@ cd nginx-$NVER
 	--with-http_gzip_static_module \
 	--with-http_stub_status_module \
 	--with-http_secure_link_module \
+	--with-http_spdy_module \
 	--http-fastcgi-temp-path=/var/tmp/nginx/fcgi/ \
 	--http-scgi-temp-path=/var/tmp/nginx/scgi/ \
 	--http-uwsgi-temp-path=/var/tmp/nginx/uwsgi/ \
