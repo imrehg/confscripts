@@ -1,4 +1,4 @@
-NVER=1.4.0
+NVER=1.5.1
 wget -c http://nginx.org/download/nginx-$NVER.tar.gz
 tar xzf nginx-$NVER.tar.gz
 cd nginx-$NVER
@@ -19,5 +19,7 @@ cd nginx-$NVER
 	--http-fastcgi-temp-path=/var/tmp/nginx/fcgi/ \
 	--http-scgi-temp-path=/var/tmp/nginx/scgi/ \
 	--http-uwsgi-temp-path=/var/tmp/nginx/uwsgi/ \
+	--with-ld-opt="-L/usr/local/ssl/lib -Wl,-rpath,/usr/local/ssl/lib -lssl -lcrypto -ldl -lz" \
+	--with-cc-opt="-I/usr/local/include -I/usr/local/ssl/include -I/usr/include" \
 
 make
