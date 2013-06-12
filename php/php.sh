@@ -1,4 +1,4 @@
-PVER=5.3.25
+PVER=5.3.26
 wget -c http://www.php.net/get/php-${PVER}.tar.bz2/from/nl1.php.net/mirror -O php-$PVER.tar.bz2
 tar xjf php-$PVER.tar.bz2
 cd php-$PVER
