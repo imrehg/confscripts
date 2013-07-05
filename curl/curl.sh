@@ -1,5 +1,5 @@
 #!/bin/bash
-VERSION=7.30.0
+VERSION=7.31.0
 FILENAME=curl-${VERSION}.tar.bz2
 URL=http://curl.haxx.se/download/${FILENAME}
 wget -c ${URL}
