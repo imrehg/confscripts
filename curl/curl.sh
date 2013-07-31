@@ -7,6 +7,17 @@ tar xjvf ${FILENAME}
 cd curl-${VERSION}
 
 ./configure \
+	--prefix=/usr \
+	--mandir=/usr/share/man \
+	--disable-dependency-tracking \
+	--disable-ldap \
+	--disable-ldaps \
+	--enable-manual \
+	--enable-versioned-symbols \
+	--enable-threaded-resolver \
+	--without-libidn \
+	--with-random=/dev/urandom \
+	--with-libssh2 \
 	--with-ssl \
 
 make
