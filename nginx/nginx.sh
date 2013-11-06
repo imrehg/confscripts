@@ -1,4 +1,4 @@
-NVER=1.5.3
+NVER=1.5.6
 wget -c http://nginx.org/download/nginx-$NVER.tar.gz
 tar xzf nginx-$NVER.tar.gz
 cd nginx-$NVER
