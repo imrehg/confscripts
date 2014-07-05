@@ -1,4 +1,4 @@
-VER=1.8.31.2
+VER=1.8.31.4
 GHVER=${VER}-beta
 
 wget -c https://github.com/pagespeed/ngx_pagespeed/archive/v${GHVER}.zip

@@ -1,4 +1,5 @@
-NVER=1.7.0
+NVER=1.7.2
+PAGESPEED=1.8.31.4-beta
 wget -c http://nginx.org/download/nginx-$NVER.tar.gz
 tar xzf nginx-$NVER.tar.gz
 cd nginx-$NVER
@@ -21,5 +22,6 @@ cd nginx-$NVER
 	--http-uwsgi-temp-path=/var/tmp/nginx/uwsgi/ \
 	--with-ld-opt="-L/usr/local/ssl/lib -Wl,-rpath,/usr/local/ssl/lib -lssl -lcrypto -ldl -lz" \
 	--with-cc-opt="-I/usr/local/include -I/usr/local/ssl/include -I/usr/include" \
+	--add-module=../../ngx_pagespeed/ngx_pagespeed-${PAGESPEED}
 
 make
