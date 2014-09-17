@@ -1,4 +1,4 @@
-NVER=1.7.4
+NVER=1.7.5
 PAGESPEED=1.8.31.4-beta
 wget -c http://nginx.org/download/nginx-$NVER.tar.gz
 tar xzf nginx-$NVER.tar.gz
