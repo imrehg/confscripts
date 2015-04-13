@@ -1,8 +1,12 @@
-NVER=1.7.5
-PAGESPEED=1.8.31.4-beta
+NVER=1.7.12
+#NVER=1.6.2
+PAGESPEED=1.9.32.2-beta
+#PAGESPEED=1.8.31.4-beta
 wget -c http://nginx.org/download/nginx-$NVER.tar.gz
 tar xzf nginx-$NVER.tar.gz
 cd nginx-$NVER
+echo $PWD
+make clean
 ./configure \
 	--prefix=/usr \
 	--pid-path=/var/run/nginx.pid \
@@ -17,6 +21,7 @@ cd nginx-$NVER
 	--with-http_stub_status_module \
 	--with-http_secure_link_module \
 	--with-http_spdy_module \
+	--with-ipv6 \
 	--http-fastcgi-temp-path=/var/tmp/nginx/fcgi/ \
 	--http-scgi-temp-path=/var/tmp/nginx/scgi/ \
 	--http-uwsgi-temp-path=/var/tmp/nginx/uwsgi/ \
